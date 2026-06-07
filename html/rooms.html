@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/rooms.css">
+        <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon">
+        <title>Rooms & Suites | Yinx Hotel de l'Aurelia</title>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/rooms.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="site-header" id="site-header">
+            <div class="header-btn">
+                <span class="hamburger"></span>
+            </div>
+
+            <nav class="header-nav">
+                <a href="/html/index.html" class="header-logo-link">
+                    <div class="header-logo">
+                        <img src="/img/logo/logo.png" alt="logo-img" loading="lazy">
+                        <p>
+                            <span class="gold cursive shine">Yinx</span><br>
+                            Hotel <span class="small">de l'</span><span class="gold shine">Aurelia</span>
+                        </p>
+                    </div>
+                </a>
+
+                <ul class="header-links">
+                    <li><a href="/html/home.html"><ion-icon name="home" class="header-icon"></ion-icon> Home</a></li>
+                    <li><a href="/html/about.html"><ion-icon name="book" class="header-icon"></ion-icon> About</a></li>
+                    <li><a href="/html/rooms.html"><ion-icon name="bed" class="header-icon"></ion-icon> Rooms</a></li>
+                    <li><a href="/html/gallery.html"><ion-icon name="images" class="header-icon"></ion-icon> Gallery</a></li>
+                    <li><a href="/html/contact.html"><ion-icon name="people" class="header-icon"></ion-icon> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <!-- PAGE HERO -->
+            <section class="page-hero" id="page-hero">
+                <div class="page-hero-content">
+                    <p class="page-hero-tag">Our Rooms & Suites</p>
+                    <h1 class="page-hero-title">
+                        Rest Redefined,<br>
+                        <span class="gold-text shine">Night After Night.</span>
+                    </h1>
+                    <hr class="page-hero-hr">
+                    <p class="page-hero-desc">
+                        From our intimate Standard Rooms to the grandeur of the Presidential Suite,
+                        every space is crafted to make you feel at home — in the most extraordinary way.
+                    </p>
+                </div>
+                <div class="page-hero-scroll">
+                    <ion-icon name="arrow-down-sharp"></ion-icon>
+                    <span>Explore rooms</span>
+                </div>
+            </section>
+
+
+            <!-- BOOKING BAR -->
+            <section class="booking-bar" id="booking">
+                <div class="booking-inner">
+                    <div class="booking-field" id="checkin-field">
+                        <label class="booking-label">
+                            <ion-icon name="calendar-outline"></ion-icon> CHECK-IN
+                        </label>
+                        <span class="booking-value" id="checkin-display">Select date</span>
+                        <input type="date" class="booking-date-input" id="checkin-input">
+                    </div>
+
+                    <div class="booking-divider"></div>
+
+                    <div class="booking-field" id="checkout-field">
+                        <label class="booking-label">
+                            <ion-icon name="calendar-outline"></ion-icon> CHECK-OUT
+                        </label>
+                        <span class="booking-value" id="checkout-display">Select date</span>
+                        <input type="date" class="booking-date-input" id="checkout-input">
+                    </div>
+
+                    <div class="booking-divider"></div>
+
+                    <div class="booking-field" id="guests-field">
+                        <label class="booking-label">
+                            <ion-icon name="people-outline"></ion-icon> GUESTS
+                        </label>
+                        <div class="guests-control">
+                            <button class="guests-btn" id="guests-minus" aria-label="Remove guest">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="booking-value" id="guests-display">2 Adults</span>
+                            <button class="guests-btn" id="guests-plus" aria-label="Add guest">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-booking" id="check-availability">
+                        Check Availability
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- ROOM CARDS -->
+            <section class="rooms-section" id="rooms">
+
+                <!-- Standard Room -->
+                <div class="room-block" id="room-standard" data-room="standard">
+                    <div class="room-block-image">
+                        <img src="/img/room/standard-room.png" alt="Standard Room" loading="lazy">
+                        <div class="room-block-badge">From ₦35,000 / night</div>
+                    </div>
+
+                    <div class="room-block-content">
+                        <p class="subheader">STANDARD ROOM</p>
+                        <h2 class="room-block-title">Comfort That Keeps It Simple.</h2>
+                        <p class="room-block-desc">
+                            Our Standard Room is designed for the traveler who wants everything they need and nothing they don't. Clean lines, plush bedding, and quiet comfort — the ideal base for every stay.
+                        </p>
+
+                        <div class="room-features-grid">
+                            <div class="room-feature">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <span>Queen Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="wifi-outline"></ion-icon>
+                                <span>Free Wi-Fi</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="tv-outline"></ion-icon>
+                                <span>32" Smart TV</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="water-outline"></ion-icon>
+                                <span>En-suite Bathroom</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="snow-outline"></ion-icon>
+                                <span>Air Conditioning</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <span>Sleeps 2-3</span>
+                            </div>
+                        </div>
+
+                        <div class="room-block-cta">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">₦35,000</span>
+                                <span class="price-note">/ night</span>
+                            </div>
+                            <button class="btn btn-book" data-room="Standard Room" data-price="35000">
+                                Book This Room
+                                <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deluxe Room -->
+                <div class="room-block room-block-reverse" id="room-deluxe" data-room="deluxe">
+                    <div class="room-block-image">
+                        <img src="/img/room/deluxe-room.png" alt="Deluxe Room" loading="lazy">
+                        <div class="room-block-badge">From ₦55,000 / night</div>
+                    </div>
+
+                    <div class="room-block-content">
+                        <p class="subheader">DELUXE ROOM</p>
+                        <h2 class="room-block-title">A Step Above the Ordinary.</h2>
+                        <p class="room-block-desc">
+                            Wake up to city views and the kind of morning that sets the tone for the day. The Deluxe Room elevates every detail — from the king-size bed to the in-room mini fridge stocked to your preference.
+                        </p>
+
+                        <div class="room-features-grid">
+                            <div class="room-feature">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <span>King Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>City View</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="fast-food-outline"></ion-icon>
+                                <span>Mini Fridge</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="wifi-outline"></ion-icon>
+                                <span>Free Wi-Fi</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="tv-outline"></ion-icon>
+                                <span>43" Smart TV</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <span>Sleeps 2-3</span>
+                            </div>
+                        </div>
+
+                        <div class="room-block-cta">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">₦55,000</span>
+                                <span class="price-note">/ night</span>
+                            </div>
+                            <button class="btn btn-book" data-room="Deluxe Room" data-price="55000">
+                                Book This Room
+                                <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Junior Suite -->
+                <div class="room-block" id="room-junior-suite" data-room="junior-suite">
+                    <div class="room-block-image">
+                        <img src="/img/room/junior-suite.png" alt="Junior Suite" loading="lazy">
+                        <div class="room-block-badge room-block-badge-gold">From ₦95,000 / night</div>
+                    </div>
+
+                    <div class="room-block-content">
+                        <p class="subheader">JUNIOR SUITE</p>
+                        <h2 class="room-block-title">Space to Breathe, Room to Live.</h2>
+                        <p class="room-block-desc">
+                            The Junior Suite introduces a dedicated sitting area — a space to unwind, work, or simply take in the surroundings. With a king bed, Smart TV, and complimentary breakfast, it's made for guests who settle in properly.
+                        </p>
+
+                        <div class="room-features-grid">
+                            <div class="room-feature">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <span>King Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="tv-outline"></ion-icon>
+                                <span>55" Smart TV</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="fast-food-outline"></ion-icon>
+                                <span>Complimentary Breakfast</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="cafe-outline"></ion-icon>
+                                <span>Sitting Area</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="wifi-outline"></ion-icon>
+                                <span>Free Wi-Fi</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <span>Sleeps 2-3</span>
+                            </div>
+                        </div>
+
+                        <div class="room-block-cta">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">₦95,000</span>
+                                <span class="price-note">/ night</span>
+                            </div>
+                            <button class="btn btn-book" data-room="Junior Suite" data-price="95000">
+                                Book This Room
+                                <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Presidential Suite -->
+                <div class="room-block room-block-reverse room-block-presidential" id="room-presidential" data-room="presidential">
+                    <div class="room-block-image">
+                        <img src="/img/room/presidential-suites.png" alt="Presidential Suite" loading="lazy">
+                        <div class="room-block-badge room-block-badge-gold">From ₦250,000 / night</div>
+                    </div>
+
+                    <div class="room-block-content">
+                        <p class="subheader">PRESIDENTIAL SUITE</p>
+                        <h2 class="room-block-title">The Pinnacle of Aurelia Luxury.</h2>
+                        <p class="room-block-desc">
+                            Two king bedrooms. A private bar. A full living room. The Presidential Suite is not just a room — it is an experience reserved for those who expect nothing less than extraordinary. Everything from the furnishings to the service is tailored to perfection.
+                        </p>
+
+                        <div class="room-features-grid">
+                            <div class="room-feature">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <span>2 King Bedrooms</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="beer-outline"></ion-icon>
+                                <span>Private Bar</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="home-outline"></ion-icon>
+                                <span>Full Living Room</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="ribbon-outline"></ion-icon>
+                                <span>Personal Butler</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="fast-food-outline"></ion-icon>
+                                <span>All Meals Included</span>
+                            </div>
+                            <div class="room-feature">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <span>Sleeps up to 4</span>
+                            </div>
+                        </div>
+
+                        <div class="room-block-cta">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">₦250,000</span>
+                                <span class="price-note">/ night</span>
+                            </div>
+                            <button class="btn btn-book btn-book-gold" data-room="Presidential Suite" data-price="250000">
+                                Book This Suite
+                                <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- COMPARISON TABLE -->
+            <section class="compare-section" id="compare">
+                <div class="section-header center">
+                    <p class="subheader">COMPARE ROOMS</p>
+                    <h2 class="header">Find Your Perfect Fit.</h2>
+                </div>
+
+                <div class="compare-table-wrap">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th class="compare-feature-col">Feature</th>
+                                <th>Standard</th>
+                                <th>Deluxe</th>
+                                <th>Junior Suite</th>
+                                <th class="compare-col-gold">Presidential</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="compare-feature-col">Price / night</td>
+                                <td>₦35,000</td>
+                                <td>₦55,000</td>
+                                <td>₦95,000</td>
+                                <td class="compare-col-gold">₦250,000</td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Bed Type</td>
+                                <td>Queen</td>
+                                <td>King</td>
+                                <td>King</td>
+                                <td class="compare-col-gold">2x King</td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Sleeps</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2-3</td>
+                                <td class="compare-col-gold">Up to 4</td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Free Wi-Fi</td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Breakfast</td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">City View</td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Sitting Area</td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="checkmark-circle" class="check"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Private Bar</td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="compare-feature-col">Personal Butler</td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td><ion-icon name="close-circle" class="cross"></ion-icon></td>
+                                <td class="compare-col-gold"><ion-icon name="checkmark-circle" class="check gold"></ion-icon></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <!-- CTA BANNER -->
+            <section class="cta-banner">
+                <div class="cta-content">
+                    <p class="subheader">READY TO BOOK?</p>
+                    <h2 class="cta-title">Your Room is Waiting.</h2>
+                    <p class="cta-desc">Select your dates above or call us directly to reserve. Best rates guaranteed when you book direct.</p>
+                    <button class="btn btn-primary scroll-cta" data-target="#booking">
+                        Pick Your Dates
+                        <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                    </button>
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+            <section class="footer-top">
+                <h3>Contact Us</h3>
+                <div class="contact-us">
+                    <div class="contacts"><h4>Address</h4><p>15 Woji Road, Port Harcourt</p></div>
+                    <div class="contacts"><h4>Phone</h4><p>+234 807 380 4150</p></div>
+                    <div class="contacts"><h4>Email</h4><p>amosyinx@gmail.com</p></div>
+                </div>
+            </section>
+            <section class="footer-bottom">
+                <hr>
+                <div class="footer-socials">
+                    <h3>Follow us on our socials.</h3>
+                    <div class="social-icons">
+                        <ion-icon name="logo-facebook" class="icons"></ion-icon>
+                        <ion-icon name="logo-instagram" class="icons"></ion-icon>
+                        <ion-icon name="logo-whatsapp" class="icons"></ion-icon>
+                        <ion-icon name="logo-tiktok" class="icons"></ion-icon>
+                        <ion-icon name="logo-youtube" class="icons"></ion-icon>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy;<span class="nowrap">2026 Yinx Hotel de l'Aurelia</span> | <span class="nowrap">All rights reserved.</span></p>
+                </div>
+            </section>
+        </footer>
+
+        <div class="scroll-to-top" id="scroll-to-top">
+            <button class="btn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+        </div>
+
+        <!-- BOOKING MODAL -->
+        <div class="booking-modal" id="booking-modal" aria-hidden="true">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-box">
+                <button class="modal-close" id="modal-close" aria-label="Close">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+                <p class="modal-tag">Booking Request</p>
+                <h3 class="modal-title" id="modal-room-name">Standard Room</h3>
+                <hr class="modal-hr">
+                <div class="modal-summary" id="modal-summary">
+                    <div class="modal-summary-row">
+                        <span>Check-in</span>
+                        <span id="modal-checkin">—</span>
+                    </div>
+                    <div class="modal-summary-row">
+                        <span>Check-out</span>
+                        <span id="modal-checkout">—</span>
+                    </div>
+                    <div class="modal-summary-row">
+                        <span>Guests</span>
+                        <span id="modal-guests">—</span>
+                    </div>
+                    <div class="modal-summary-row modal-total-row">
+                        <span>Total</span>
+                        <span id="modal-total" class="modal-total-price">—</span>
+                    </div>
+                </div>
+                <p class="modal-note">Our reservations team will confirm your booking within 24 hours via the contact details you provide.</p>
+                <div class="modal-fields">
+                    <input type="text" class="modal-input" id="modal-name" placeholder="Your Full Name">
+                    <input type="tel"  class="modal-input" id="modal-phone" placeholder="Phone Number">
+                    <input type="email" class="modal-input" id="modal-email" placeholder="Email Address">
+                </div>
+                <button class="btn btn-primary modal-submit" id="modal-submit">
+                    Confirm Request
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </button>
+                <div class="modal-success" id="modal-success" style="display:none;">
+                    <ion-icon name="checkmark-circle-outline" class="modal-success-icon"></ion-icon>
+                    <p>Request sent! We'll be in touch within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

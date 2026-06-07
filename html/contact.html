@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon">
+        <title>Contact Us | Yinx Hotel de l'Aurelia</title>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/contact.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <header class="site-header" id="site-header">
+            <div class="header-btn">
+                <span class="hamburger"></span>
+            </div>
+
+            <nav class="header-nav">
+                <a href="/html/home.html" class="header-logo-link">
+                    <div class="header-logo">
+                        <img src="/img/logo/logo.png" alt="logo-img" loading="lazy">
+                        <p>
+                            <span class="gold cursive shine">Yinx</span><br>
+                            Hotel <span class="small">de l'</span><span class="gold shine">Aurelia</span>
+                        </p>
+                    </div>
+                </a>
+
+                <ul class="header-links">
+                    <li><a href="/html/home.html"><ion-icon name="home" class="header-icon"></ion-icon> Home</a></li>
+                    <li><a href="/html/about.html"><ion-icon name="book" class="header-icon"></ion-icon> About</a></li>
+                    <li><a href="/html/rooms.html"><ion-icon name="bed" class="header-icon"></ion-icon> Rooms</a></li>
+                    <li><a href="/html/gallery.html"><ion-icon name="images" class="header-icon"></ion-icon> Gallery</a></li>
+                    <li><a href="/html/contact.html"><ion-icon name="people" class="header-icon"></ion-icon> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <!-- PAGE HERO -->
+            <section class="page-hero">
+                <div class="page-hero-content">
+                    <p class="page-hero-tag">Get In Touch</p>
+                    <h1 class="page-hero-title">
+                        We'd Love to<br>
+                        <span class="gold-text shine">Hear From You.</span>
+                    </h1>
+                    <hr class="page-hero-hr">
+                    <p class="page-hero-desc">
+                        Whether you're planning a stay, enquiring about events, or simply have a question — our team is always ready to help.
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- CONTACT SECTION -->
+            <section class="contact-section" id="contact">
+
+                <!-- Left: contact details -->
+                <div class="contact-details">
+                    <p class="subheader">REACH US DIRECTLY</p>
+                    <h2 class="header">Always Here,<br>Always Ready.</h2>
+                    <p class="description">
+                        Our team is available around the clock. Reach out through any of the channels below and we'll respond as quickly as possible.
+                    </p>
+
+                    <div class="detail-cards">
+
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Address</span>
+                                <span class="detail-value">15 Woji Road, Port Harcourt,<br>Rivers State, Nigeria</span>
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Phone</span>
+                                <a href="tel:+2348073804150" class="detail-value detail-link">+234 807 380 4150</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Email</span>
+                                <a href="mailto:amosyinx@gmail.com" class="detail-value detail-link">amosyinx@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <ion-icon name="time-outline"></ion-icon>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Front Desk Hours</span>
+                                <span class="detail-value">24 hours · 7 days a week</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Socials -->
+                    <div class="contact-socials">
+                        <p class="contact-socials-label">Follow us</p>
+                        <div class="contact-social-icons">
+                            <ion-icon name="logo-facebook"  class="social-icon"></ion-icon>
+                            <ion-icon name="logo-instagram" class="social-icon"></ion-icon>
+                            <ion-icon name="logo-whatsapp"  class="social-icon"></ion-icon>
+                            <ion-icon name="logo-tiktok"    class="social-icon"></ion-icon>
+                            <ion-icon name="logo-youtube"   class="social-icon"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Right: contact form -->
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <p class="form-heading">Send Us a Message</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name <span class="required">*</span></label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    placeholder="e.g. Perebi Yinkere"
+                                    autocomplete="name"
+                                >
+                                <span class="form-error" id="error-name"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="contact-phone"
+                                    name="phone"
+                                    placeholder="+234 800 000 0000"
+                                    autocomplete="tel"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address <span class="required">*</span></label>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                            >
+                            <span class="form-error" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject <span class="required">*</span></label>
+                            <select id="contact-subject" name="subject">
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="Room Enquiry">Room Enquiry</option>
+                                <option value="Event & Package Enquiry">Event & Package Enquiry</option>
+                                <option value="Dining Reservation">Dining Reservation</option>
+                                <option value="General Question">General Question</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="form-error" id="error-subject"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message <span class="required">*</span></label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="5"
+                                placeholder="Tell us how we can help..."
+                            ></textarea>
+                            <span class="form-error" id="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit" id="form-submit">
+                            Send Message
+                            <ion-icon name="send-outline" class="submit-icon"></ion-icon>
+                        </button>
+
+                        <!-- Success state (hidden until submit) -->
+                        <div class="form-success" id="form-success" aria-live="polite">
+                            <ion-icon name="checkmark-circle-outline" class="success-icon"></ion-icon>
+                            <p class="success-title">Message Sent!</p>
+                            <p class="success-desc">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+                        </div>
+
+                    </form>
+                </div>
+
+            </section>
+
+        </main>
+
+        <div class="scroll-to-top" id="scroll-to-top">
+            <button class="btn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+        </div>
+
+    </body>
+</html>

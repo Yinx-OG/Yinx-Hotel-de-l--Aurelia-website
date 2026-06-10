@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/landing.css">
+        <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon">
+        <title>Landing Page | Yinx Hotel de l'Aurelia</title>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/main.js" defer></script>
+    </head>
+
+    <div class="unavailable-modal" id="unavailable-modal" aria-hidden="true">
+        <div class="unavailable-backdrop" id="unavailable-backdrop"></div>
+        <div class="unavailable-box">
+            <button class="unavailable-close" id="unavailable-close" aria-label="Close">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+    
+            <div class="unavailable-icon">
+                <ion-icon name="construct-outline"></ion-icon>
+            </div>
+    
+            <p class="unavailable-tag">Coming Soon</p>
+            <h3 class="unavailable-title">Page Currently Unavailable</h3>
+            <hr class="unavailable-hr">
+            <p class="unavailable-desc">
+                This page is currently under construction. We're working hard to bring it to you — check back soon.
+            </p>
+    
+            <button class="btn unavailable-btn" id="unavailable-ok">
+                Got It
+                <ion-icon name="checkmark-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <body>
+        <header>
+            <div class="header-btn">
+                <span class="hamburger"></span>
+            </div>
+
+            <nav class="header-nav">
+                <a href="/html/index.html" class="header-logo-link">
+                    <div class="header-logo">
+                        <img src="/img/logo/logo.png" alt="logo-img" loading="lazy">
+
+                        <p>
+                            <span class="gold cursive shine">Yinx</span><br>
+                            Hotel <span class="small">de l'</span><span class="gold shine">Aurelia</span>
+                        </p>
+                    </div>
+                </a>
+                
+
+
+                <ul class="header-links">
+                    <li>
+                        <a href="/html/index.html">
+                            <ion-icon name="home" class="header-icon"></ion-icon> Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/html/about.html" data-unavailable="true">
+                            <ion-icon name="book" class="header-icon"></ion-icon> About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/html/rooms.html">
+                            <ion-icon name="bed" class="header-icon"></ion-icon>Rooms
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/html/gallery.html" data-unavailable="true">
+                            <ion-icon name="images" class="header-icon"></ion-icon>Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/html/contact.html">
+                            <ion-icon name="people" class="header-icon"></ion-icon>Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h1>
+                        Welcome to <span class="nowrap">Hotel de l'<span class="gold-2 shine">Aurelia</span></span>
+                    </h1>
+
+                    <hr>
+
+                    <p class="hero-text-p">
+                        The <span class="gold-2 shine">Gold Standard</span> Where <span class="nowrap">Luxury Feels Personal</span>
+                    </p>
+
+                    <div class="hero-CTA">
+                        <button class="btn" data-target="/html/rooms.html">
+                            Book Now
+                            <ion-icon class="arrow" name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <div class="hero-features">
+                        <p class="feature-text">
+                            <ion-icon name="fast-food-sharp" class="icon"></ion-icon>
+                            Free Breakfast
+                        </p>
+
+                        <p class="feature-text">
+                            <ion-icon name="brush-sharp" class="icon"></ion-icon>
+                            Art Gallery
+                        </p>
+
+                        <p class="feature-text">
+                            <ion-icon name="wifi-sharp" class="icon"></ion-icon>
+                            Free WiFi
+                        </p>
+                    </div> 
+                </div>
+
+                <div class="hero-scroll-down hidden">
+                    <ion-icon name="arrow-down-sharp"></ion-icon>
+                    <span>Scroll down</span>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="about-img">
+                    <img src="/img/about/about.jpg" alt="about">
+                </div>
+
+                <div class="about-content">
+                    <p class="subheader">ABOUT US</p>
+                    <h2 class="header">Your Perfect Getaway Begins With Us.</h2>
+                    <p class="description">
+                        At Hotel de l'Aurelia, every stay is designed to feel effortless, elegant, and unforgettable. From beautifully crafted spaces to personalized hospitality, we create experiences where comfort, luxury, and warmth come together perfectly.
+                    </p>
+
+                    <div class="about-btn">
+                        <button class="btn" data-unavailable="true">Read More</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="room-section">
+                <p class="subheader">OUR ROOMS & SUITES</p>
+                <h2 class="header">Experience Rest Redefined in Every Room & Suite.</h2>
+                <div class="room-grid">
+                    <div class="room-card">
+                        <div class="room-card-image">
+                            <img src="/img/room/standard-room.png" alt="standard-room">
+                        </div>
+
+                        <div class="room-card-details">
+                            <h4>Standard Room</h4>
+
+                            <div class="features">
+                                <ion-icon name="wifi-outline"></ion-icon>
+                                <p>Free Wi-Fi</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="tv-outline"></ion-icon>
+                                <p>TV</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <p>Queen Bed</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                                <p>₦35,000 / night</p>
+                            </div>
+
+                            <div class="room-card-btn">
+                                <button class="btn" data-target="/html/rooms.html#room-standard">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <div class="room-card-image">
+                            <img src="/img/room/deluxe-room.png" alt="deluxe-room">
+                        </div>
+
+                        <div class="room-card-details">
+                            <h4>Deluxe Room</h4>
+
+                            <div class="features">
+                                <ion-icon name="search-outline"></ion-icon>
+                                <p>City view</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="fast-food-outline"></ion-icon>
+                                <p>Mini fridge</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <p>King Bed</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                                <p>₦55,000 / night</p>
+                            </div>
+
+                            <div class="room-card-btn">
+                                <button class="btn" data-target="/html/rooms.html#room-deluxe">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-card hidden">
+                        <div class="room-card-image">
+                            <img src="/img/room/junior-suite.png" alt="junior-suite">
+                        </div>
+
+                        <div class="room-card-details">
+                            <h4>Junior Suite</h4>
+
+                            <div class="features">
+                                <ion-icon name="tv-outline"></ion-icon>
+                                <p>Smart TV</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="fast-food-outline"></ion-icon>
+                                <p>Complimentary breakfast</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <p>1 King Bed + Sitting Area</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                                <p>₦95,000 / night</p>
+                            </div>
+
+                            <div class="room-card-btn">
+                                <button class="btn" data-target="/html/rooms.html#room-junior-suite">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <div class="room-card-image">
+                            <img src="/img/room/presidential-suites.png" alt="presidential-suites">
+                        </div>
+
+                        <div class="room-card-details">
+                            <h4>Presidential Suite</h4>
+
+                            <div class="features">
+                                <ion-icon name="search-outline"></ion-icon>
+                                <p>Living room</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="beer-outline"></ion-icon>
+                                <p>Private bar</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <p>2 Bedrooms (King Beds)</p>
+                            </div>
+                            <div class="features">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                                <p>₦250,000 / night</p>
+                            </div>
+
+                            <div class="room-card-btn">
+                                <button class="btn" data-target="/html/rooms.html#room-presidential">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <p class="subheader">GALLERY</p>
+                <h2 class="header">A Glimpse Into Refined Luxury.</h2>
+                <p class="description">
+                    Explore the elegance, comfort, and atmosphere that make Hotel de l'Aurelia truly unforgettable.
+                </p>
+
+                <div class="gallery-btn">
+                    <button class="btn" data-unavailable="true">View More</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Each item needs a data-label for the lightbox caption -->
+                    <div class="gallery-item" data-label="Hotel Pool">
+                        <img src="/img/gallery/hotel-pool.png" alt="Hotel Pool" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-label="Presidential Suite">
+                        <img src="/img/gallery/presidential-suites.png" alt="Presidential Suite" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-label="Hotel Catering">
+                        <img src="/img/gallery/hotel-catering.png" alt="Hotel Catering" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-label="Hotel Bar">
+                        <img src="/img/gallery/hotel-bar.png" alt="Hotel Bar" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-label="Art Gallery">
+                        <img src="/img/gallery/hotel-art.png" alt="Art Gallery" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-label="Deluxe Room">
+                        <img src="/img/gallery/deluxe-room.png" alt="Deluxe Room" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+            
+                    <div class="gallery-item" data-label="Standard Room">
+                        <img src="/img/gallery/standard-room.png" alt="Standard Room" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-label="Hotel Lobby">
+                        <img src="/img/gallery/hotel-lobby.png" alt="Hotel Lobby" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item hidden" data-label="Junior Suite">
+                        <img src="/img/gallery/junior-suite.png" alt="Junior Suite" loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="footer-top">
+                <h3>Contact Us</h3>
+
+                <div class="contact-us">
+                    <div class="contacts">
+                        <h4>Address</h4>
+                        <p>15 Woji Road, Port Harcourt</p>
+                    </div>
+
+                    <div class="contacts">
+                        <h4>Phone</h4>
+                        <p>+234 807 380 4150</p>
+                    </div>
+
+                    <div class="contacts">
+                        <h4>Email</h4>
+                        <p>amosyinx@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-bottom">
+                <hr>
+
+                <div class="footer-socials">
+                    <h3>Follow us on our socials.</h3>
+                    <div class="social-icons">
+                        <ion-icon name="logo-facebook" class="icons"></ion-icon>
+                        <ion-icon name="logo-instagram" class="icons"></ion-icon>
+                        <ion-icon name="logo-whatsapp" class="icons"></ion-icon>
+                        <ion-icon name="logo-tiktok" class="icons"></ion-icon>
+                        <ion-icon name="logo-youtube" class="icons"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>
+                        &copy;<span class="nowrap">2026 Yinx Hotel de l'Aurelia</span> | <span class="nowrap">All rights reserved.</span>
+                    </p>
+                </div>
+            </section>
+        </footer>
+
+        <div class="scroll-to-top">
+            <button class="btn">
+               <ion-icon name="arrow-up-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <div class="lightbox-backdrop"></div>
+        
+            <button class="lightbox-close" aria-label="Close gallery">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        
+            <button class="lightbox-prev" aria-label="Previous image">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+        
+            <button class="lightbox-next" aria-label="Next image">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-img" id="lightbox-img">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+            </div>
+        </div>
+    </body>
+</html>

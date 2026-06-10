@@ -4,18 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/home.css">
         <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon">
-        <title>Landing Page | Yinx Hotel de l'Aurelia</title>
+        <title>Homepage | Yinx Hotel de l'Aurelia</title>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="/js/main.js" defer></script>
+        <script src="/js/home.js" defer></script>
     </head>
 
+    <div class="unavailable-modal" id="unavailable-modal" aria-hidden="true">
+        <div class="unavailable-backdrop" id="unavailable-backdrop"></div>
+        <div class="unavailable-box">
+            <button class="unavailable-close" id="unavailable-close" aria-label="Close">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+    
+            <div class="unavailable-icon">
+                <ion-icon name="construct-outline"></ion-icon>
+            </div>
+    
+            <p class="unavailable-tag">Coming Soon</p>
+            <h3 class="unavailable-title">Page Currently Unavailable</h3>
+            <hr class="unavailable-hr">
+            <p class="unavailable-desc">
+                This page is currently under construction. We're working hard to bring it to you — check back soon.
+            </p>
+    
+            <button class="btn unavailable-btn" id="unavailable-ok">
+                Got It
+                <ion-icon name="checkmark-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
     <body>
-        <header>
+        <header class="site-header" id="site-header">
             <div class="header-btn">
                 <span class="hamburger"></span>
             </div>
@@ -24,338 +49,481 @@
                 <a href="/html/index.html" class="header-logo-link">
                     <div class="header-logo">
                         <img src="/img/logo/logo.png" alt="logo-img" loading="lazy">
-
                         <p>
                             <span class="gold cursive shine">Yinx</span><br>
                             Hotel <span class="small">de l'</span><span class="gold shine">Aurelia</span>
                         </p>
                     </div>
                 </a>
-                
-
 
                 <ul class="header-links">
-                    <li>
-                        <a href="/html/home.html">
-                            <ion-icon name="home" class="header-icon"></ion-icon> Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/html/about.html">
-                            <ion-icon name="book" class="header-icon"></ion-icon> About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/html/rooms.html">
-                            <ion-icon name="bed" class="header-icon"></ion-icon>Rooms
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/html/gallery.html">
-                            <ion-icon name="images" class="header-icon"></ion-icon>Gallery
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/html/contact.html">
-                            <ion-icon name="people" class="header-icon"></ion-icon>Contact
-                        </a>
-                    </li>
+                    <li><a href="/html/index.html"><ion-icon name="home" class="header-icon"></ion-icon> Home</a></li>
+                    <li><a href="/html/about.html" data-unavailable="true"><ion-icon name="book" class="header-icon"></ion-icon> About</a></li>
+                    <li><a href="/html/rooms.html"><ion-icon name="bed" class="header-icon"></ion-icon> Rooms</a></li>
+                    <li><a href="/html/gallery.html" data-unavailable="true"><ion-icon name="images" class="header-icon"></ion-icon> Gallery</a></li>
+                    <li><a href="/html/contact.html"><ion-icon name="people" class="header-icon"></ion-icon> Contact</a></li>
                 </ul>
             </nav>
         </header>
 
+
         <main>
-            <section class="hero-section">
-                <div class="hero-text">
-                    <h1>
-                        Welcome to <span class="nowrap">Hotel de l'<span class="gold-2 shine">Aurelia</span></span>
-                    </h1>
+            <section class="hero-slider" id="hero">
 
-                    <hr>
+                <div class="slides-track" id="slides-track">
 
-                    <p class="hero-text-p">
-                        The <span class="gold-2 shine">Gold Standard</span> Where <span class="nowrap">Luxury Feels Personal</span>
-                    </p>
-
-                    <div class="hero-CTA">
-                        <button class="btn" data-target="/html/rooms.html">
-                            Book Now
-                            <ion-icon class="arrow" name="arrow-forward-outline"></ion-icon>
-                        </button>
+                    <!-- Slide 1: Welcome -->
+                    <div class="slide slide-welcome active" data-slide="0">
+                        <div class="slide-content">
+                            <p class="slide-tag">Welcome to</p>
+                            <h1 class="slide-title">
+                                Hotel <span class="small-text">de l'</span><span class="gold-text shine">Aurelia</span>
+                            </h1>
+                            <hr class="slide-hr">
+                            <p class="slide-desc">The <span class="gold-text shine">Gold Standard</span> Where Luxury Feels Personal</p>
+                            <div class="slide-cta">
+                                <button class="btn btn-primary scroll-cta" data-target="#booking">
+                                    Book Now
+                                    <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="hero-features">
-                        <p class="feature-text">
-                            <ion-icon name="fast-food-sharp" class="icon"></ion-icon>
-                            Free Breakfast
-                        </p>
+                    <!-- Slide 2: Amenities -->
+                    <div class="slide slide-amenities" data-slide="1">
+                        <div class="slide-content">
+                            <p class="slide-tag">What We Offer</p>
+                            <h2 class="slide-title">Every <span class="gold-text shine">Luxury</span>,<br>Thoughtfully Curated.</h2>
+                            <hr class="slide-hr">
+                            <p class="slide-desc">From the pool to the plate, nothing is overlooked.</p>
+                            <div class="slide-cta">
+                                <button class="btn btn-primary scroll-cta" data-target="#amenities">
+                                    See Amenities
+                                    <ion-icon name="arrow-down-outline" class="arrow"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                        <p class="feature-text">
-                            <ion-icon name="brush-sharp" class="icon"></ion-icon>
-                            Art Gallery
-                        </p>
+                    <!-- Slide 3: Dining & Bar -->
+                    <div class="slide slide-dining" data-slide="2">
+                        <div class="slide-content">
+                            <p class="slide-tag">Dining & Bar</p>
+                            <h2 class="slide-title">Taste the<br><span class="gold-text shine">Aurelia</span> Experience.</h2>
+                            <hr class="slide-hr">
+                            <p class="slide-desc">Exquisite cuisine, handcrafted cocktails, unforgettable ambiance.</p>
+                            <div class="slide-cta">
+                                <button class="btn btn-primary scroll-cta" data-target="#dining">
+                                    View Menu
+                                    <ion-icon name="arrow-down-outline" class="arrow"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                        <p class="feature-text">
-                            <ion-icon name="wifi-sharp" class="icon"></ion-icon>
-                            Free WiFi
-                        </p>
-                    </div> 
+                    <!-- Slide 4: Events & Packages -->
+                    <div class="slide slide-events" data-slide="3">
+                        <div class="slide-content">
+                            <p class="slide-tag">Events & Packages</p>
+                            <h2 class="slide-title">Every <span class="gold-text shine">Occasion</span>,<br>Perfectly Hosted.</h2>
+                            <hr class="slide-hr">
+                            <p class="slide-desc">Weddings, corporate retreats, romantic getaways — we do it all.</p>
+                            <div class="slide-cta">
+                                <button class="btn btn-primary scroll-cta" data-target="#events">
+                                    See Packages
+                                    <ion-icon name="arrow-down-outline" class="arrow"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Reviews -->
+                    <div class="slide slide-reviews" data-slide="4">
+                        <div class="slide-content">
+                            <p class="slide-tag">Guest Reviews</p>
+                            <h2 class="slide-title">Loved by Every<br><span class="gold-text shine">Guest</span> We Host.</h2>
+                            <hr class="slide-hr">
+                            <p class="slide-desc">Don't take our word for it — hear from those who've stayed.</p>
+                            <div class="slide-cta">
+                                <button class="btn btn-primary scroll-cta" data-target="#reviews">
+                                    See Reviews
+                                    <ion-icon name="arrow-down-outline" class="arrow"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="hero-scroll-down hidden">
+                <button class="slider-arrow arrow-prev" id="slider-prev" aria-label="Previous slide">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <button class="slider-arrow arrow-next" id="slider-next" aria-label="Next slide">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+
+                <div class="slider-dots" id="slider-dots">
+                    <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                    <button class="dot" data-index="3" aria-label="Slide 4"></button>
+                    <button class="dot" data-index="4" aria-label="Slide 5"></button>
+                </div>
+
+                <div class="slide-counter">
+                    <span id="slide-current">1</span>
+                    <span class="counter-sep">/</span>
+                    <span>5</span>
+                </div>
+
+                <div class="hero-scroll-hint">
                     <ion-icon name="arrow-down-sharp"></ion-icon>
                     <span>Scroll down</span>
                 </div>
+
             </section>
 
-            <section class="about-section">
-                <div class="about-img">
-                    <img src="/img/about/about.jpg" alt="about">
+
+            <section class="booking-bar" id="booking">
+                <div class="booking-inner">
+
+                    <div class="booking-field" id="checkin-field">
+                        <label class="booking-label">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            CHECK-IN
+                        </label>
+                        <span class="booking-value" id="checkin-display">Select date</span>
+                        <input type="date" class="booking-date-input" id="checkin-input">
+                    </div>
+
+                    <div class="booking-divider"></div>
+
+                    <div class="booking-field" id="checkout-field">
+                        <label class="booking-label">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            CHECK-OUT
+                        </label>
+                        <span class="booking-value" id="checkout-display">Select date</span>
+                        <input type="date" class="booking-date-input" id="checkout-input">
+                    </div>
+
+                    <div class="booking-divider"></div>
+
+                    <div class="booking-field" id="guests-field">
+                        <label class="booking-label">
+                            <ion-icon name="people-outline"></ion-icon>
+                            GUESTS
+                        </label>
+                        <div class="guests-control">
+                            <button class="guests-btn" id="guests-minus" aria-label="Remove guest">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="booking-value" id="guests-display">2 Adults</span>
+                            <button class="guests-btn" id="guests-plus" aria-label="Add guest">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-booking" id="check-availability">
+                        Check Availability
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+
+                </div>
+            </section>
+
+
+            <section class="amenities-section" id="amenities">
+                <div class="section-header center">
+                    <p class="subheader">WHAT WE OFFER</p>
+                    <h2 class="header">Everything You Need,<br>Nothing You Don't.</h2>
+                    <p class="description">Every amenity at Hotel de l'Aurelia is thoughtfully designed to elevate your stay from comfortable to extraordinary.</p>
                 </div>
 
-                <div class="about-content">
-                    <p class="subheader">ABOUT US</p>
-                    <h2 class="header">Your Perfect Getaway Begins With Us.</h2>
+                <div class="amenities-grid">
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="water-outline"></ion-icon>
+                        </div>
+                        <h4>Swimming Pool</h4>
+                        <p>Temperature-controlled infinity pool with poolside service.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </div>
+                        <h4>Free Breakfast</h4>
+                        <p>Complimentary continental and à la carte breakfast daily.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="brush-outline"></ion-icon>
+                        </div>
+                        <h4>Art Gallery</h4>
+                        <p>Rotating exhibitions featuring works by Nigerian artists.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="beer-outline"></ion-icon>
+                        </div>
+                        <h4>Private Bar</h4>
+                        <p>Handcrafted cocktails and premium spirits, open until late.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="wifi-outline"></ion-icon>
+                        </div>
+                        <h4>Free Wi-Fi</h4>
+                        <p>High-speed fibre connectivity throughout the entire hotel.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="ribbon-outline"></ion-icon>
+                        </div>
+                        <h4>Concierge</h4>
+                        <p>24/7 personal concierge for reservations, transport and more.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="car-outline"></ion-icon>
+                        </div>
+                        <h4>Valet Parking</h4>
+                        <p>Complimentary secure valet parking for all hotel guests.</p>
+                    </div>
+
+                    <div class="amenity-card">
+                        <div class="amenity-icon-wrap">
+                            <ion-icon name="flower-outline"></ion-icon>
+                        </div>
+                        <h4>Garden & Spa</h4>
+                        <p>Serene landscaped gardens with in-house spa treatments.</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="dining-section" id="dining">
+                <div class="dining-img">
+                    <img src="/img/gallery/hotel-catering.png" alt="Aurelia Dining" loading="lazy">
+                </div>
+
+                <div class="dining-content">
+                    <p class="subheader">DINING & BAR</p>
+                    <h2 class="header">A Feast for Every Sense.</h2>
                     <p class="description">
-                        At Hotel de l'Aurelia, every stay is designed to feel effortless, elegant, and unforgettable. From beautifully crafted spaces to personalized hospitality, we create experiences where comfort, luxury, and warmth come together perfectly.
+                        At Aurelia Kitchen & Bar, every meal is an occasion. Our chefs craft dishes that celebrate West African flavours with a contemporary twist, paired with an exceptional wine list and signature cocktails that our bartenders have perfected over years.
                     </p>
 
-                    <div class="about-btn">
-                        <button class="btn" data-target="/html/about.html">Read More</button>
+                    <div class="dining-hours">
+                        <div class="hours-item">
+                            <ion-icon name="sunny-outline"></ion-icon>
+                            <div>
+                                <span class="hours-label">Breakfast</span>
+                                <span class="hours-time">6:30 AM - 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="hours-item">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                            <div>
+                                <span class="hours-label">Lunch & Dinner</span>
+                                <span class="hours-time">12:00 PM - 10:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="hours-item">
+                            <ion-icon name="wine-outline"></ion-icon>
+                            <div>
+                                <span class="hours-label">Bar</span>
+                                <span class="hours-time">4:00 PM - 1:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dining-btn">
+                        <button class="btn btn-primary">Reserve a Table</button>
                     </div>
                 </div>
             </section>
 
-            <section class="room-section">
-                <p class="subheader">OUR ROOMS & SUITES</p>
-                <h2 class="header">Experience Rest Redefined in Every Room & Suite.</h2>
-                <div class="room-grid">
-                    <div class="room-card">
-                        <div class="room-card-image">
-                            <img src="/img/room/standard-room.png" alt="standard-room">
+
+            <section class="events-section" id="events">
+                <div class="section-header center">
+                    <p class="subheader">EVENTS & PACKAGES</p>
+                    <h2 class="header">Every Occasion,<br>Perfectly Hosted.</h2>
+                    <p class="description">Whether you're celebrating love, closing deals, or simply unwinding, we have a package crafted just for you.</p>
+                </div>
+
+                <div class="events-grid">
+
+                    <div class="event-card">
+                        <div class="event-card-icon">
+                            <ion-icon name="heart-outline"></ion-icon>
                         </div>
-
-                        <div class="room-card-details">
-                            <h4>Standard Room</h4>
-
-                            <div class="features">
-                                <ion-icon name="wifi-outline"></ion-icon>
-                                <p>Free Wi-Fi</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="tv-outline"></ion-icon>
-                                <p>TV</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="bed-outline"></ion-icon>
-                                <p>Queen Bed</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <p>₦35,000 / night</p>
-                            </div>
-
-                            <div class="room-card-btn">
-                                <button class="btn" data-target="/html/rooms.html#room-standard">Learn More</button>
-                            </div>
+                        <h3 class="event-card-title">Weddings & Celebrations</h3>
+                        <p class="event-card-desc">
+                            From intimate ceremonies to grand receptions, our dedicated events team handles every detail — décor, catering, flowers, and beyond.
+                        </p>
+                        <ul class="event-card-features">
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Dedicated events coordinator</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Custom menu & bar packages</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Floral & décor arrangements</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Bridal suite included</li>
+                        </ul>
+                        <div class="event-card-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">₦850,000</span>
                         </div>
+                        <button class="btn btn-event">Enquire Now</button>
                     </div>
 
-                    <div class="room-card">
-                        <div class="room-card-image">
-                            <img src="/img/room/deluxe-room.png" alt="deluxe-room">
+                    <div class="event-card event-card-featured">
+                        <div class="event-featured-badge">Most Popular</div>
+                        <div class="event-card-icon">
+                            <ion-icon name="briefcase-outline"></ion-icon>
                         </div>
-
-                        <div class="room-card-details">
-                            <h4>Deluxe Room</h4>
-
-                            <div class="features">
-                                <ion-icon name="search-outline"></ion-icon>
-                                <p>City view</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="fast-food-outline"></ion-icon>
-                                <p>Mini fridge</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="bed-outline"></ion-icon>
-                                <p>King Bed</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <p>₦55,000 / night</p>
-                            </div>
-
-                            <div class="room-card-btn">
-                                <button class="btn" data-target="/html/rooms.html#room-deluxe">Learn More</button>
-                            </div>
+                        <h3 class="event-card-title">Corporate Retreat</h3>
+                        <p class="event-card-desc">
+                            Productive by day, luxurious by night. Our corporate packages include conference facilities, high-speed internet, and team dining experiences.
+                        </p>
+                        <ul class="event-card-features">
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Private conference room</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> AV equipment & tech support</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Team breakfast & lunch</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Discounted room rates</li>
+                        </ul>
+                        <div class="event-card-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">₦320,000</span>
+                            <span class="price-note">/ day</span>
                         </div>
+                        <button class="btn btn-event-featured">Enquire Now</button>
                     </div>
 
-                    <div class="room-card hidden">
-                        <div class="room-card-image">
-                            <img src="/img/room/junior-suite.png" alt="junior-suite">
+                    <div class="event-card">
+                        <div class="event-card-icon">
+                            <ion-icon name="airplane-outline"></ion-icon>
                         </div>
-
-                        <div class="room-card-details">
-                            <h4>Junior Suite</h4>
-
-                            <div class="features">
-                                <ion-icon name="tv-outline"></ion-icon>
-                                <p>Smart TV</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="fast-food-outline"></ion-icon>
-                                <p>Complimentary breakfast</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="bed-outline"></ion-icon>
-                                <p>1 King Bed + Sitting Area</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <p>₦95,000 / night</p>
-                            </div>
-
-                            <div class="room-card-btn">
-                                <button class="btn" data-target="/html/rooms.html#room-junior-suite">Learn More</button>
-                            </div>
+                        <h3 class="event-card-title">Weekend Getaway</h3>
+                        <p class="event-card-desc">
+                            Escape the city and recharge. Our weekend packages include two nights in a Deluxe Room, spa access, breakfast, and a sunset bar experience.
+                        </p>
+                        <ul class="event-card-features">
+                            <li><ion-icon name="checkmark-outline"></ion-icon> 2 nights in Deluxe Room</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Breakfast for two daily</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Spa & pool access</li>
+                            <li><ion-icon name="checkmark-outline"></ion-icon> Complimentary welcome drink</li>
+                        </ul>
+                        <div class="event-card-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">₦145,000</span>
+                            <span class="price-note">/ couple</span>
                         </div>
+                        <button class="btn btn-event">Enquire Now</button>
                     </div>
 
-                    <div class="room-card">
-                        <div class="room-card-image">
-                            <img src="/img/room/presidential-suites.png" alt="presidential-suites">
-                        </div>
-
-                        <div class="room-card-details">
-                            <h4>Presidential Suite</h4>
-
-                            <div class="features">
-                                <ion-icon name="search-outline"></ion-icon>
-                                <p>Living room</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="beer-outline"></ion-icon>
-                                <p>Private bar</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="bed-outline"></ion-icon>
-                                <p>2 Bedrooms (King Beds)</p>
-                            </div>
-                            <div class="features">
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <p>₦250,000 / night</p>
-                            </div>
-
-                            <div class="room-card-btn">
-                                <button class="btn" data-target="/html/rooms.html#room-presidential">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
-            <section class="gallery-section">
-                <p class="subheader">GALLERY</p>
-                <h2 class="header">A Glimpse Into Refined Luxury.</h2>
-                <p class="description">
-                    Explore the elegance, comfort, and atmosphere that make Hotel de l'Aurelia truly unforgettable.
-                </p>
-
-                <div class="gallery-btn">
-                    <button class="btn" data-target="/html/gallery.html">View More</button>
+            <section class="reviews-section" id="reviews">
+                <div class="section-header center">
+                    <p class="subheader">GUEST REVIEWS</p>
+                    <h2 class="header">What Our Guests Say.</h2>
                 </div>
 
-                <div class="gallery-grid">
-                    <!-- Each item needs a data-label for the lightbox caption -->
-                    <div class="gallery-item" data-label="Hotel Pool">
-                        <img src="/img/gallery/hotel-pool.png" alt="Hotel Pool" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                <div class="reviews-grid">
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <p class="review-quote">"Absolutely stunning. The Presidential Suite was beyond anything I expected — pure, effortless luxury from the moment we arrived."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">C</div>
+                            <div>
+                                <p class="review-name">Chidi Adeyemi</p>
+                                <p class="review-city">Lagos, Nigeria</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-label="Presidential Suite">
-                        <img src="/img/gallery/presidential-suites.png" alt="Presidential Suite" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <p class="review-quote">"The staff made us feel like royalty. Breakfast was incredible every morning and the art gallery was a beautiful surprise."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">A</div>
+                            <div>
+                                <p class="review-name">Amara Okafor</p>
+                                <p class="review-city">Abuja, Nigeria</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-label="Hotel Catering">
-                        <img src="/img/gallery/hotel-catering.png" alt="Hotel Catering" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <p class="review-quote">"We hosted our corporate retreat here and everything was flawless. The conference facilities, the food, the rooms — all world-class."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">T</div>
+                            <div>
+                                <p class="review-name">Taiwo Bello</p>
+                                <p class="review-city">Port Harcourt, Nigeria</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-label="Hotel Bar">
-                        <img src="/img/gallery/hotel-bar.png" alt="Hotel Bar" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-label="Art Gallery">
-                        <img src="/img/gallery/hotel-art.png" alt="Art Gallery" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-label="Deluxe Room">
-                        <img src="/img/gallery/deluxe-room.png" alt="Deluxe Room" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-            
-                    <div class="gallery-item" data-label="Standard Room">
-                        <img src="/img/gallery/standard-room.png" alt="Standard Room" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-label="Hotel Lobby">
-                        <img src="/img/gallery/hotel-lobby.png" alt="Hotel Lobby" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item hidden" data-label="Junior Suite">
-                        <img src="/img/gallery/junior-suite.png" alt="Junior Suite" loading="lazy">
-                        <div class="gallery-item-overlay">
-                            <ion-icon name="expand-outline" class="gallery-expand-icon"></ion-icon>
-                        </div>
-                    </div>
-
-                   
                 </div>
             </section>
+
+            <section class="cta-banner">
+                <div class="cta-content">
+                    <p class="subheader">READY TO EXPERIENCE AURELIA?</p>
+                    <h2 class="cta-title">Your Perfect Getaway<br>is One Click Away.</h2>
+                    <p class="cta-desc">Book directly for the best rates. No hidden fees. Instant confirmation.</p>
+                    <button class="btn btn-primary scroll-cta" data-target="#booking">
+                        Reserve Your Room
+                        <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+                    </button>
+                </div>
+            </section>
+
         </main>
 
         <footer>
             <section class="footer-top">
                 <h3>Contact Us</h3>
-
                 <div class="contact-us">
                     <div class="contacts">
                         <h4>Address</h4>
                         <p>15 Woji Road, Port Harcourt</p>
                     </div>
-
                     <div class="contacts">
                         <h4>Phone</h4>
                         <p>+234 807 380 4150</p>
                     </div>
-
                     <div class="contacts">
                         <h4>Email</h4>
                         <p>amosyinx@gmail.com</p>
@@ -365,7 +533,6 @@
 
             <section class="footer-bottom">
                 <hr>
-
                 <div class="footer-socials">
                     <h3>Follow us on our socials.</h3>
                     <div class="social-icons">
@@ -376,40 +543,17 @@
                         <ion-icon name="logo-youtube" class="icons"></ion-icon>
                     </div>
                 </div>
-
                 <div class="footer-copyright">
-                    <p>
-                        &copy;<span class="nowrap">2026 Yinx Hotel de l'Aurelia</span> | <span class="nowrap">All rights reserved.</span>
-                    </p>
+                    <p>&copy;<span class="nowrap">2026 Yinx Hotel de l'Aurelia</span> | <span class="nowrap">All rights reserved.</span></p>
                 </div>
             </section>
         </footer>
 
-        <div class="scroll-to-top">
+        <div class="scroll-to-top" id="scroll-to-top">
             <button class="btn">
-               <ion-icon name="arrow-up-outline"></ion-icon>
+                <ion-icon name="arrow-up-outline"></ion-icon>
             </button>
         </div>
 
-        <div class="lightbox" id="lightbox" aria-hidden="true">
-            <div class="lightbox-backdrop"></div>
-        
-            <button class="lightbox-close" aria-label="Close gallery">
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        
-            <button class="lightbox-prev" aria-label="Previous image">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-        
-            <button class="lightbox-next" aria-label="Next image">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
-        
-            <div class="lightbox-content">
-                <img src="" alt="" class="lightbox-img" id="lightbox-img">
-                <p class="lightbox-caption" id="lightbox-caption"></p>
-            </div>
-        </div>
     </body>
 </html>

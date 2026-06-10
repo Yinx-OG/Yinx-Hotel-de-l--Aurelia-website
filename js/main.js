@@ -152,6 +152,45 @@ document.querySelectorAll(".btn[data-target]").forEach(function (btn) {
     });
 });
 
+// #region UNAVAILABLE MODAL
+(function () {
+    const modal    = document.getElementById("unavailable-modal");
+    const backdrop = document.getElementById("unavailable-backdrop");
+    const closeBtn = document.getElementById("unavailable-close");
+    const okBtn    = document.getElementById("unavailable-ok");
+ 
+    function openUnavailable() {
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+ 
+    function closeUnavailable() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+ 
+    // Trigger on any element with data-unavailable="true"
+    document.querySelectorAll("[data-unavailable='true']").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+            e.preventDefault();
+            openUnavailable();
+        });
+    });
+ 
+    closeBtn.addEventListener("click", closeUnavailable);
+    backdrop.addEventListener("click", closeUnavailable);
+    okBtn.addEventListener("click", closeUnavailable);
+ 
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("open")) {
+            closeUnavailable();
+        }
+    });
+})();
+// #endregion
+
 // 5. Scroll Reveal //
 // hero-section
 ScrollReveal().reveal(".hero-text", {

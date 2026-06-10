@@ -14,6 +14,31 @@
         <script src="/js/contact.js" defer></script>
     </head>
 
+    <div class="unavailable-modal" id="unavailable-modal" aria-hidden="true">
+        <div class="unavailable-backdrop" id="unavailable-backdrop"></div>
+        <div class="unavailable-box">
+            <button class="unavailable-close" id="unavailable-close" aria-label="Close">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+    
+            <div class="unavailable-icon">
+                <ion-icon name="construct-outline"></ion-icon>
+            </div>
+    
+            <p class="unavailable-tag">Coming Soon</p>
+            <h3 class="unavailable-title">Page Currently Unavailable</h3>
+            <hr class="unavailable-hr">
+            <p class="unavailable-desc">
+                This page is currently under construction. We're working hard to bring it to you — check back soon.
+            </p>
+    
+            <button class="btn unavailable-btn" id="unavailable-ok">
+                Got It
+                <ion-icon name="checkmark-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
     <body>
 
         <!-- HEADER -->
@@ -23,7 +48,7 @@
             </div>
 
             <nav class="header-nav">
-                <a href="/html/home.html" class="header-logo-link">
+                <a href="/html/index.html" class="header-logo-link">
                     <div class="header-logo">
                         <img src="/img/logo/logo.png" alt="logo-img" loading="lazy">
                         <p>
@@ -34,10 +59,10 @@
                 </a>
 
                 <ul class="header-links">
-                    <li><a href="/html/home.html"><ion-icon name="home" class="header-icon"></ion-icon> Home</a></li>
-                    <li><a href="/html/about.html"><ion-icon name="book" class="header-icon"></ion-icon> About</a></li>
+                    <li><a href="/html/index.html"><ion-icon name="home" class="header-icon"></ion-icon> Home</a></li>
+                    <li><a href="/html/about.html" data-unavailable="true"><ion-icon name="book" class="header-icon"></ion-icon> About</a></li>
                     <li><a href="/html/rooms.html"><ion-icon name="bed" class="header-icon"></ion-icon> Rooms</a></li>
-                    <li><a href="/html/gallery.html"><ion-icon name="images" class="header-icon"></ion-icon> Gallery</a></li>
+                    <li><a href="/html/gallery.html" data-unavailable="true"><ion-icon name="images" class="header-icon"></ion-icon> Gallery</a></li>
                     <li><a href="/html/contact.html"><ion-icon name="people" class="header-icon"></ion-icon> Contact</a></li>
                 </ul>
             </nav>
